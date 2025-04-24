@@ -15,3 +15,6 @@ Set the initial cfg.Debug value before getopt runs (which will override this val
 
 # Warning
 These scripts are currently fairly rough but it works well enough. They may need to be modified to do what you want
+
+# Contribute
+You are welcome to make any contribution. but please contribute to the develop branch to ensure that the main branch is clean.
