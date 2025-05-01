@@ -41,10 +41,12 @@
         <h4>Windows (Python Interpreter)</h4>
         <p>In command prompt (assuming you have installed python and added it to path!), run</p>
         <pre>pip install lxml</pre>
-        <p>With the LXML library installed, cd to the lovation where you have stored the scripts, and run</p>
+        <p>With the LXML library installed, cd to the location where you have stored the scripts, and run</p>
         <pre>python [ScriptName].py [Filename].svg</pre>
 
         <h4>Windows (Cygwin)</h4>
+
+        <h4>Linux (Ubuntu 16.04 LTS)</h4>
 
         <h3 id="setbb.py_and_setsch.py">setbb.py and setsch.py</h3>
         <p>These python scripts make changes to the specified SVG file, typically renumbering connectors.</p>
@@ -52,8 +54,6 @@
           <li><bold>setbb.py</bold> - renumbers connectorsin the breadboard/PCB svg. To trigger, rename the beginning connector to <code>connector0pin</code></li>
           <li><bold>setsch.py</bold> - renumbers connectorsin the schematic svg. To trigger, rename the beginning connector to <code>?</code></li>
         </ul>
-
-        <h4>Linux (Ubuntu 16.04 LTS)</h4>
 
         <h3 id="E2fRemoveUnusedConnectors.py">E2fRemoveUnusedCinnectors.py</h3>
         <p>Cleans up an <a href="https://github.com/fritzing/eagle2fritzing">Eagle2Fritzing</a>-made SVG by removing unused connectors and stray groups. To trigger, change the first connector to <code>connector0pin+</code></p>
