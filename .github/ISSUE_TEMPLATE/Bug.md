@@ -1,7 +1,7 @@
 ---
 name: Bug Template
 about: Use this template if you are reporting a bug
-labels: Bug
+labels: bug
 ---
 ## Current Behaviour
 <!--Summerise what you did-->
