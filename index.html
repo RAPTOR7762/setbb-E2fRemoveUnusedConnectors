@@ -32,7 +32,41 @@
       <section id="main_content" class="inner">
         <h2 id="fritzing">What is Fritzing</h2>
         <p><a href="https://fritzing.org">Fritzing</a> is an <a href="http://www.opensource.org/docs/osd">open source initiative</a>  to develop amateur or hobby CAD software for the design of electronics hardware, intended to allow designers and artists to build more permanent circuits from prototypes. It was developed at the University of Applied Sciences Potsdam. Fritzing is free software under the GPL 3.0 or later license, with the source code available on GitHub and the binaries at a monetary cost, which is allowed by the GPL.</p>
+
+        <h2 id="about_the_python_scripts">About the python scripts</h2>
+
+        <h3 id="setbb.py_and_setsch.py">setbb.py and setsch.py</h3>
+        <p>These python scripts make changes to the specified SVG file, typically renumbering connectors.</p>
+        <ul>
+          <li><bold>setbb.py</bold> - renumbers connectorsin the breadboard/PCB svg. To trigger, rename the beginning connector to <code>connector0pin</code></li>
+          <li><bold>setsch.py</bold> - renumbers connectorsin the schematic svg. To trigger, rename the beginning connector to <code>?</code></li>
+        </ul>
+
+        <h3 id="E2fRemoveUnusedConnectors.py">E2fRemoveUnusedCinnectors.py</h3>
+        <p>Cleans up an <a href="https://github.com/fritzing/eagle2fritzing">Eagle2Fritzing</a>-made SVG by removing unused connectors and stray groups. To trigger, change the first connector to <code>connector0pin+</code></p>
+
+        <h2 id="debug_mode">Debug Mode</h2>
+        <ul>
+          <li>Set cfg.Debug to 0 for normal operation (rename the input file and write the pretty printed output to the input file name.</li>
+          <li>Set cfg.Debug to 1 to not rename the input file and write the output to stdout rather than the file for debugging but with no debug messages.</li>
+          <li>Set cfg.Debug to 2 to not rename the input file and write the output to stdout rather than the file for debugging with debug messages for entry and exit from routines.</li>
+          <li>Set cfg.Debug to 3 to not rename the input file and write the output to stdout rather than the file for debugging with verbous debug messages for detail debugging. This supresses messages from already debugged code to suppress clutter in the debug output.</li>
+          <li>Set cfg.Debug to 4 to output all the debug messages even those suppressed at 3.</li>
+        </ul>
+        <p><bold>Note</bold> - Set the initial cfg.Debug value before getopt runs (which will override this value). Used to debug the getopt routines before a cfg.Debug value is set. For normal operation, set it to 0 to supress debugging until a debug value is set by getopt. To enable debugging getopt, set a value in cfg.Debug.</p>
+
+        <h2 id="warning">Warning</h2>
+        <p>These scripts are currently fairly rough but it works well enough. They may need to be modified to do what you want</p>
+
+        <h2 id="contribute">Contribute</h2>
+        <p>You are welcome to make any contribution. but please contribute to the develop branch to ensure that the master branch is clean.</p>
       </section>
+    </div>
+
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Theme made with GitHub Pages. (Website still under development) <a href="https://github.com/RAPTOR7762/setbb-E2fRemoveUnusedConnectors/tree/gh-pages">Website Source</a></p>
+      </footer>
     </div>
   </body>
 </html>
