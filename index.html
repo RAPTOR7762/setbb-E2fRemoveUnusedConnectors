@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width,maximum-scale=2">
     <link rel="stylesheet" type="text/css" media="screen" href="/assets/slate-style.css">
 
-    <title>setbb-setsch-E2fRemoveUnusedConnectors</title>
+    <title>Fritzing Parts Graphics-Python Scripts</title>
     <meta name="description" content="Python scripts mainly used for renumbering connectors" />
   </head>
 
@@ -45,6 +45,26 @@
         <pre>python [ScriptName].py [Filename].svg</pre>
 
         <h4>Windows (Cygwin)</h4>
+        <p>For cygwin you need to install <a href="cygwin.org">cygwin</a>. Use the setup program as detailed on cygwin website. The basic install with the following additions does fine:</p>
+        <pre><code>
+          python3: Py3K language interpreter 
+          python3-lxml: Python XML2/XSLT bindings
+        </code></pre>
+        <p>(and all their associated dependencies)</p>
+        <p>with that in place from a cygwin terminal copy the python scripts</p>
+        <pre><code>
+          FritzingCheckPartCfg.py
+          setbb.py
+          setsch.py
+          E2fRemoveUnusedConnectors.py
+          FritzingTools.py
+          PP.py
+          PPTools.py
+        </code></pre>
+        <p>
+          to <code>/usr/local/bin</code>
+          <code>chmod ugo+x /usr/local/bin/*.py</code>
+        </p>
 
         <h4>Linux (Ubuntu 16.04 LTS)</h4>
 
