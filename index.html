@@ -61,9 +61,9 @@
           setbb.py
           setsch.py
           E2fRemoveUnusedConnectors.py
-          FritzingTools.py
-          PP.py
-          PPTools.py
+          FritzingToolsw.py
+          PPw.py
+          PPToolsw.py
         </pre>
         <p>
           to <code>/usr/local/bin</code>
@@ -72,6 +72,22 @@
 
         <h4>Linux (Ubuntu 16.04 LTS)</h4>
         <p>It appears that there are different instructions to installing this, so I'll list both ways</p>
+
+        <h5>Peter Van Epp</h5>
+        <p>copy the py scripts to /usr/local/bin via sudo:</p>
+        <pre>
+          sudo cp FritzingCheckPartCfg.py /usr/local/bin 
+          sudo cp setbb.py /usr/local/bin
+          sudo cp setsch.py /usr/local/bin
+          sudo cp E2fRemoveUnusedConnectors.py /usr/local/bin
+          sudo cp FritzingToolsw.py /usr/local/bin 
+          sudo cp PPw.py /usr/local/bin 
+          sudo cp PPToolsw.py /usr/local/bin 
+        </pre>
+        <code>chmod ugo+x /usr/local/bin/*.py</code>
+        <p>The Ubuntu install appears to have lxml and python 3 already installed</p>
+        <p>Note the script has problems with unicode under python 2.7 and probably won't
+run there without modification (which I don't know how to make). </p>
 
         <h3 id="setbb.py_and_setsch.py">setbb.py and setsch.py</h3>
         <p>These python scripts make changes to the specified SVG file, typically renumbering connectors.</p>
