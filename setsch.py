@@ -2,7 +2,7 @@ import FritzingCheckPartCfg as cfg
 
 cfg.Debug = 0
 
-Version = '0.0.2'  # Version number of this file.
+Version = '0.0.2b'  # Version number of this file.
 
 # Import os and sys to get file rename and the argv stuff, re for regex and 
 # logging to get logging support. 
