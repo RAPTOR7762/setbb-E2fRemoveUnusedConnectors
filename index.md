@@ -62,5 +62,19 @@ to `/usr/local/bin`
 ### Linux (Ubuntu 16.04 LTS)
 It appears that there are different instructions to installing this, so I'll list both ways
 
-**Peter Van Epp**: opy the py scripts to /usr/local/bin via sudo:
+**Peter Van Epp**: copy the py scripts to /usr/local/bin via sudo:
 
+```
+sudo cp FritzingCheckPartCfg.py /usr/local/bin 
+sudo cp setbb.py /usr/local/bin
+sudo cp setsch.py /usr/local/bin
+sudo cp E2fRemoveUnusedConnectors.py /usr/local/bin
+sudo cp FritzingToolsw.py /usr/local/bin 
+sudo cp PPw.py /usr/local/bin 
+sudo cp PPToolsw.py /usr/local/bin
+```
+
+`chmod ugo+x /usr/local/bin/*.py`
+
+The Ubuntu install appears to have lxml and python 3 already installed
+Note the script has problems with unicode under python 2.7 and probably won't run there without modification (which I don't know how to make). 
