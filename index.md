@@ -1,10 +1,3 @@
-<!--
- | Theme based on GitHub Pages slate theme
- |
- | @see https://github.com/pages-themes/slate
- | @see https://github.com/pages-themes/slate/blob/master/LICENSE
--->
-
 ---
 layout: default
 ---
