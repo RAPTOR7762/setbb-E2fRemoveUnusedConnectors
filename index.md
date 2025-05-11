@@ -14,7 +14,7 @@ layout: default
     <a id="forkme_banner" href="https://github.com/RAPTOR7762/setbb-E2fRemoveUnusedConnectors">View on GitHub</a>
     <img src="assets/fritzing.svg" style="float: left; box-shadow: none; border: none; padding-right: 2em" />
     <h1 id="project_title">Fritzing Parts Graphics-Python Scripts</h1>
-    <h2 id="project_tagline">Make changes to an svg file</h2>
+    <h2 id="project_tagline">Makes changes to an svg file</h2>
   </header>
 </div>
 
@@ -33,17 +33,43 @@ There are a few ways to run the script, and I'll list three of them:
 
 ### Windows (Python Interpreter)
 In command prompt (assuming you have installed python and added it to path!), run
+
 ```
 pip install lxml
 ```
+
 With the LXML library installed, cd to the location where you have stored the scripts, and run
+
 ```
 python [ScriptName].py [Filename].svg
 ```
 
 ### Windows (cygwin)
 For cygwin you need to install [cygwin](https://cygwin.org). Use the setup program as detailed on cygwin website. The basic install with the following additions does fine:
+
 ```
 python3: Py3K language interpreter 
 python3-lxml: Python XML2/XSLT bindings
 ```
+
+(and all their associated dependencies)
+with that in place from a cygwin terminal copy the python scripts
+
+```
+FritzingCheckPartCfg.py
+setbb.py
+setsch.py
+E2fRemoveUnusedConnectors.py
+FritzingToolsw.py
+PPw.py
+PPToolsw.py
+```
+
+to `/usr/local/bin`
+`chmod ugo+x /usr/local/bin/*.py`
+
+### Linux (Ubuntu 16.04 LTS)
+It appears that there are different instructions to installing this, so I'll list both ways
+
+**Peter Van Epp**: opy the py scripts to /usr/local/bin via sudo:
+
