@@ -1,6 +1,6 @@
 title: Fritzing Parts Graphics-Python Scripts
 description: Python scripts mainly used for renumbering connectors
-logo: assets/fritzing.svg
+logo: /assets/fritzing.svg
 show_downloads: true
 google_analytics:
 theme: jekyll-theme-slate
