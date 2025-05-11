@@ -9,15 +9,6 @@
 layout: default
 ---
 
-<div id="header_wrap" class="outer">
-  <header class="inner">
-    <a id="forkme_banner" href="https://github.com/RAPTOR7762/setbb-E2fRemoveUnusedConnectors">View on GitHub</a>
-    <img src="assets/fritzing.svg" style="float: left; box-shadow: none; border: none; padding-right: 2em" />
-    <h1 id="project_title">Fritzing Parts Graphics-Python Scripts</h1>
-    <h2 id="project_tagline">Makes changes to an svg file</h2>
-  </header>
-</div>
-
 # What is Fritzing?
 
 * * *
