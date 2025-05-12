@@ -45,7 +45,6 @@ setbb.py
 setsch.py
 E2fRemoveUnusedConnectors.py
 FritzingToolsw.py
-PPw.py
 PPToolsw.py
 ```
 
@@ -62,8 +61,7 @@ sudo cp FritzingCheckPartCfg.py /usr/local/bin
 sudo cp setbb.py /usr/local/bin
 sudo cp setsch.py /usr/local/bin
 sudo cp E2fRemoveUnusedConnectors.py /usr/local/bin
-sudo cp FritzingToolsw.py /usr/local/bin 
-sudo cp PPw.py /usr/local/bin 
+sudo cp FritzingToolsw.py /usr/local/bin
 sudo cp PPToolsw.py /usr/local/bin
 ```
 
@@ -71,3 +69,13 @@ sudo cp PPToolsw.py /usr/local/bin
 
 The Ubuntu install appears to have lxml and python 3 already installed
 Note the script has problems with unicode under python 2.7 and probably won't run there without modification (which I don't know how to make). 
+
+## setbb.py and setsch.py
+These python scripts make changes to the specified SVG file, typically renumbering connectors.
+
+* **setbb.py** - renumbers connectorsin the breadboard/PCB svg. To trigger, rename the beginning connector to `connector0pin`
+* **setsch.py** - renumbers connectorsin the schematic svg. To trigger, rename the beginning connector to `?`
+
+## Debug Mode
+* Set cfg.Debug to 0 for normal operation (rename the input file and write the pretty printed output to the input file name.
+* Set cfg.Debug to 1 to not rename the input file and write the output to stdout rather than the file for debugging but with no debug messages.
