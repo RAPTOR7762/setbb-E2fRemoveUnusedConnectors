@@ -54,7 +54,7 @@ to `/usr/local/bin`
 ### Linux (Ubuntu 16.04 LTS)
 It appears that there are different instructions to installing this, so I'll list both ways
 
-**Peter Van Epp**: copy the py scripts to /usr/local/bin via sudo:
+**Peter Van Epp** - copy the py scripts to /usr/local/bin via sudo:
 
 ```
 sudo cp FritzingCheckPartCfg.py /usr/local/bin 
@@ -79,3 +79,20 @@ These python scripts make changes to the specified SVG file, typically renumberi
 ## Debug Mode
 * Set cfg.Debug to 0 for normal operation (rename the input file and write the pretty printed output to the input file name.
 * Set cfg.Debug to 1 to not rename the input file and write the output to stdout rather than the file for debugging but with no debug messages.
+* Set cfg.Debug to 2 to not rename the input file and write the output to stdout rather than the file for debugging with debug messages for entry and exit from routines.
+* Set cfg.Debug to 3 to not rename the input file and write the output to stdout rather than the file for debugging with verbous debug messages for detail debugging. This supresses messages from already debugged code to suppress clutter in the debug output.
+* Set cfg.Debug to 4 to output all the debug messages even those suppressed at 3.
+
+**Note** - Set the initial cfg.Debug value before getopt runs (which will override this value). Used to debug the getopt routines before a cfg.Debug value is set. For normal operation, set it to 0 to supress debugging until a debug value is set by getopt. To enable debugging getopt, set a value in cfg.Debug.
+
+# Warning
+
+* * *
+
+These scripts are currently fairly rough but it works well enough. They may need to be modified to do what you want.
+
+# Contribute
+
+* * *
+
+You are welcome to make any contribution. but please contribute to the develop branch to ensure that the master branch is clean.
