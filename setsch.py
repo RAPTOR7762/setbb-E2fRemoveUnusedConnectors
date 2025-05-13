@@ -2,7 +2,7 @@ import FritzingCheckPartCfg as cfg
 
 cfg.Debug = 0
 
-Version = '0.0.1'  # Version number of this file.
+Version = '0.0.2b'  # Version number of this file.
 
 # Import os and sys to get file rename and the argv stuff, re for regex and 
 # logging to get logging support. 
@@ -85,20 +85,17 @@ def DumpTree(Elem, State, level=0):
     
     logger.info (' Entering DumpTree level %s Elem len %s\n', level, len(Elem))
 
-    IdRegex = re.compile(r'connector0pin', re.IGNORECASE)
-#    IdRegex = re.compile(r'connector0pin', re.IGNORECASE)
+    IdRegex = re.compile(r'connector', re.IGNORECASE)
 
 #    print ('line {0:s} Attrib = {1:s}\n'.format(str(Elem.sourceline), str(Elem.attrib)))
 
     Id = Elem.get('id')
 
-    if not State['ConSeen'] == True and Id != None and IdRegex.search(Id) != None: 
+    if Id != None and IdRegex.search(Id) != None: 
 
         # Found 'connector'
 
         State['ConSeen'] = True
-
-        print("Found connector\n")
     
         logger.debug ('DumpTree\n    Found connector. Line %s\n', Elem.sourceline)
 
@@ -110,19 +107,91 @@ def DumpTree(Elem, State, level=0):
     
         logger.debug ('DumpTree\n    Process Id %s Tag %s\n', Id, Tag)
 
-        # process line.
+        if Tag == '{http://www.w3.org/2000/svg}line':
 
-        Id = 'connector' + str(State['ConNo']) + 'pin' 
+            if State['Expect'] != 'line':
 
-        Elem.set('id', Id)
+                print ('Error: Line: {0:s} Expected line!\n'.format(str(Elem.sourceline)))
 
-        # increase the connector number by 1. 
+            else:
 
-        State['ConNo'] = State['ConNo'] + 1
+                # process line.
+
+                Id = 'connector' + str(State['ConNo']) + 'pin' 
+
+                Elem.set('id', Id)
+
+                State['Expect'] = 'rect'
+
+            # End of if State['Expect'] != 'line':
+
+        elif Tag == '{http://www.w3.org/2000/svg}rect':
+
+            if State['Expect'] != 'rect':
+
+                print ('Error: Line: {0:s} Expected rect!\n'.format(str(Elem.sourceline)))
+
+            else:
+
+                 # process line.
+
+                Id = 'connector' + str(State['ConNo']) + 'terminal' 
+
+                Elem.set('id', Id)
+
+                # Then set what we expect next. 
+
+                State['Expect'] = 'line'
+
+                # increase the connector number by 1. 
+
+                State['ConNo'] = State['ConNo'] + 1
+                     
+
+            # End of if State['Expect'] != 'rect':
+
+        else:
+
+            print ('Error: Line {0:s} neither line nor rect!\n'.format(str(Elem.sourceline)))
+
+        # End of if Tag == '{http://www.w3.org/2000/svg}line':
 
     # End of if State['ConSeen']:
 
-    # End of if Id != None and IdRegex.search(Id) != None: 
+                
+
+
+
+#    for Entry in Elem.attrib:
+
+#        Attrib = Elem.get(Entry)
+
+#        print ('Entry = {0:s} Attrib = {1:s}\n'.format(str(Entry), str(Attrib)))
+
+#        if Attrib != None:
+
+#                print ('Convert = {0:s} \n'.format(str(Attrib)))
+
+            # End of if IdRegex.search(Id) != None:
+
+        # End of if Id != None:
+
+    # End of for Entry in Elem.attrib:
+
+#    if Id != None:
+
+#        if IdRegex.search(Id) != None: 
+
+#            Con = int(''.join(filter(str.isdigit, Id)))
+
+#            if Con < 0:
+
+#                Id = Id.replace(str(Con), str(Con - 16)) 
+
+#                Elem.set('id', Id)
+
+#            print ('Id = {0:s} Con = {1:s}\n'.format(str(Id), str(Con)))
+
 
     i = "\n" + level*"  "
     if len(Elem):
