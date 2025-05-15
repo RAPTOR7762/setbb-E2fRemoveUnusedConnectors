@@ -3,6 +3,6 @@ description: Python scripts mainly used for renumbering connectors
 logo: /assets/fritzing.svg
 show_downloads: true
 google_analytics:
-theme: jekyll-theme-midnight
+theme: jekyll-theme-slate
 footer:
   copyright: "Website maintained by RAPTOR7762, Python scripts maintained by Peter Van Epp
