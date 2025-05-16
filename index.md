@@ -49,6 +49,7 @@ PPToolsw.py
 ```
 
 to `/usr/local/bin`
+
 `chmod ugo+x /usr/local/bin/*.py`
 
 ### Linux (Ubuntu 16.04 LTS)
