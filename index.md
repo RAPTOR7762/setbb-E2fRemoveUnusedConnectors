@@ -18,13 +18,13 @@ There are a few ways to run the script, and I'll list three of them:
 ### Windows (Python Interpreter)
 In command prompt (assuming you have installed python and added it to path!), run
 
-```
+```bash
 pip install lxml
 ```
 
 With the LXML library installed, cd to the location where you have stored the scripts, and run
 
-```
+```bash
 python [ScriptName].py [Filename].svg
 ```
 
@@ -57,7 +57,7 @@ It appears that there are different instructions to installing this, so I'll lis
 
 **Peter Van Epp** - copy the py scripts to /usr/local/bin via sudo:
 
-```
+```bash
 sudo cp FritzingCheckPartCfg.py /usr/local/bin 
 sudo cp setbb.py /usr/local/bin
 sudo cp setsch.py /usr/local/bin
