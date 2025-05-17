@@ -71,9 +71,7 @@ Note the script has problems with unicode under python 2.7 and probably won't ru
 **Kjell Mogernstern** - Python3 is required
 
 ```bash
-git clone git@github.com:vanepp/FritzingCheckPart.git
-# alternative
-# git clone git@github.com:KjellMorgenstern/FritzingCheckPart.git
+git clone git@github.com:RAPTOR7762/FritzingCheckPart.git
 pip install --user lxml
 ```
 
