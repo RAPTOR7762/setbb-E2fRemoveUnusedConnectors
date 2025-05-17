@@ -84,7 +84,7 @@ These python scripts make changes to the specified SVG file, typically renumberi
 * Set cfg.Debug to 3 to not rename the input file and write the output to stdout rather than the file for debugging with verbous debug messages for detail debugging. This supresses messages from already debugged code to suppress clutter in the debug output.
 * Set cfg.Debug to 4 to output all the debug messages even those suppressed at 3.
 
-**Note** - Set the initial cfg.Debug value before getopt runs (which will override this value). Used to debug the getopt routines before a cfg.Debug value is set. For normal operation, set it to 0 to supress debugging until a debug value is set by getopt. To enable debugging getopt, set a value in cfg.Debug.
+**Note** - Set the initial cfg.Debug value before getopt runs (which will override this value). Used to debug the getopt routines before a cfg.Debug value is set. For normal operation, set it to 0 to supress debugging until a debug value is set by getopt. To enable debugging getopt, set a value in cfg.Debug
 
 # Warning
 
