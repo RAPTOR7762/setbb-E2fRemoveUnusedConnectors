@@ -14,13 +14,13 @@ There are a few ways to run the script, and I'll list three of them:
 #### Windows (Python Interpreter)
 In command prompt (assuming you have installed python and added it to path!), run
 
-```console
+```bash
 pip install lxml
 ```
 
 With the LXML library installed, cd to the location where you have stored the scripts, and run
 
-```console
+```
 python [ScriptName].py [Filename].svg
 ```
 
@@ -52,7 +52,7 @@ to `/usr/local/bin`
 
 **Peter Van Epp** - copy the py scripts to /usr/local/bin via sudo:
 
-```console
+```bash
 sudo cp FritzingCheckPartCfg.py /usr/local/bin 
 sudo cp setbb.py /usr/local/bin
 sudo cp setsch.py /usr/local/bin
@@ -70,7 +70,7 @@ Note the script has problems with unicode under python 2.7 and probably won't ru
 
 **Kjell Mogernstern** - Python3 is required
 
-```console
+```bash
 git clone git@github.com:RAPTOR7762/fritzing-renumber-cons.git
 pip install --user lxml
 ```
