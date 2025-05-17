@@ -71,7 +71,7 @@ Note the script has problems with unicode under python 2.7 and probably won't ru
 **Kjell Mogernstern** - Python3 is required
 
 ```bash
-git clone git@github.com:RAPTOR7762/FritzingCheckPart.git
+git clone git@github.com:RAPTOR7762/fritzing-renumber-cons.git
 pip install --user lxml
 ```
 
