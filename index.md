@@ -4,13 +4,9 @@ layout: default
 
 ## What is Fritzing?
 
-* * *
-
 [Fritzing](https://fritzing.org) is an [open source initiative](http://www.opensource.org/docs/osd) to develop amateur or hobby CAD software for the design of electronics hardware, intended to allow designers and artists to build more permanent circuits from prototypes. It was developed at the University of Applied Sciences Potsdam. Fritzing is free software under the [GPL 3.0](https://www.gnu.org/licenses/gpl-3.0.en.html) or later license, with the source code available on [GitHub](https://github.com/fritzing/fritzing-app) and the binaries at a monetary cost, which is allowed by the GPL.
 
 ## About the python scripts
-
-* * *
 
 ### Running the scripts
 There are a few ways to run the script, and I'll list three of them:
@@ -84,16 +80,12 @@ These python scripts make changes to the specified SVG file, typically renumberi
 * Set cfg.Debug to 3 to not rename the input file and write the output to stdout rather than the file for debugging with verbous debug messages for detail debugging. This supresses messages from already debugged code to suppress clutter in the debug output.
 * Set cfg.Debug to 4 to output all the debug messages even those suppressed at 3.
 
-**Note** - Set the initial cfg.Debug value before getopt runs (which will override this value). Used to debug the getopt routines before a cfg.Debug value is set. For normal operation, set it to 0 to supress debugging until a debug value is set by getopt. To enable debugging getopt, set a value in cfg.Debug
+**Note** - Set the initial cfg.Debug value before getopt runs (which will override this value). Used to debug the getopt routines before a cfg.Debug value is set. For normal operation, set it to 0 to supress debugging until a debug value is set by getopt. To enable debugging getopt, set a value in cfg.Debug.
 
 ## Warning
-
-* * *
 
 These scripts are currently fairly rough but it works well enough. They may need to be modified to do what you want.
 
 ## Contribute
-
-* * *
 
 You are welcome to make any contribution. but please contribute to the develop branch to ensure that the master branch is clean.
