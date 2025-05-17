@@ -49,7 +49,6 @@ to `/usr/local/bin`
 `chmod ugo+x /usr/local/bin/*.py`
 
 #### Linux (Ubuntu 16.04 LTS)
-It appears that there are different instructions to installing this, so I'll list both ways
 
 **Peter Van Epp** - copy the py scripts to /usr/local/bin via sudo:
 
@@ -66,6 +65,17 @@ sudo cp PPToolsw.py /usr/local/bin
 
 The Ubuntu install appears to have lxml and python 3 already installed
 Note the script has problems with unicode under python 2.7 and probably won't run there without modification (which I don't know how to make). 
+
+#### Linux (Ubantu 18.04 LTS)
+
+**Kjell Mogernstern** - Python3 is required
+
+```bash
+git clone git@github.com:vanepp/FritzingCheckPart.git
+# alternative
+# git clone git@github.com:KjellMorgenstern/FritzingCheckPart.git
+pip install --user lxml
+```
 
 ### setbb.py and setsch.py
 These python scripts make changes to the specified SVG file, typically renumbering connectors.
