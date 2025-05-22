@@ -5,7 +5,7 @@
 
 # variables and their default value.
 
-Repo                = ""            # Default parts repo. Replace this with the
+Repo                = "            # Default parts repo. Replace this with the
                                     # path to the Fritzing-parts repo. 
                                     # -a override the default repo with the 
                                     # supplied path. 
